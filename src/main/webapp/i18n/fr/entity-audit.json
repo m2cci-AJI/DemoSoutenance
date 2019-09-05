@@ -1,0 +1,42 @@
+{
+    "entityAudit": {
+        "home": {
+            "title": "Entity Audits",
+            "filter": "",
+            "entityOrTable": "Entity/Table",
+            "limitTo": "Nombre de résultats par page  ",
+            "loadChangeList": "Charger"
+        },
+        "result": {
+            "showInfo": "Last <strong>{{ limit }}</strong> Changes for <strong>{{ entity }}</strong>",
+            "searchFieldLabel": "Filter:",
+            "globalFilter": "global filter",
+            "entityIdFilter": "entity id filter",
+            "tableHeader": {
+                "entityId": "Id",
+                "action": "Action",
+                "version": "Version",
+                "value": "Données",
+                "modifiedDate": "Date de modification",
+                "modifiedBy": "Modifié par "
+            },
+            "tableBody": {
+                "field": "champs",
+                "value": "Value",
+                "viewDetails": "View Audit Change Details"
+            },
+            "noDataFound": "No Data found for the filters",
+            "firstAuditEntry": "There is no previous version available for this entry.\nThis is the first audit entry captured for this object."
+        },
+        "detail": {
+            "close": "Close",
+            "title": "Details",
+            "action": "{{action}} ces modifications ont été pris en compte ",
+            "old": "valeur modifiée",
+            "new": "nouvelle valeur ",
+            "changedFields": "Champs changé",
+            "allFields": "All Fields",
+            "done": "Fermer"
+        }
+    }
+}

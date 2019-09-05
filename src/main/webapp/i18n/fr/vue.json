@@ -1,0 +1,15 @@
+{
+    "chargePlanApplicationApp": {
+        "vue": {
+            "home": {
+                "title": "Vues",
+                "createLabel": "Créer un nouveau Vue",
+                "createOrEditLabel": "Créer ou éditer un Vue",
+                "search": "Recherche pour Vue"
+            },
+            "detail": {
+                "title": "Vue"
+            }
+        }
+    }
+}

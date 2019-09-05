@@ -1,0 +1,12 @@
+{
+    "chargeplanApplicationApp": {
+        "Skill": {
+            "null": "",
+            "JAVA": "JAVA",
+            "C": "C",
+            "JAVASCRIPT": "JAVASCRIPT",
+            "PHP": "PHP",
+            "UML": "UML"
+        }
+    }
+}

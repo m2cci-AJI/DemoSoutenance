@@ -1,0 +1,27 @@
+{
+    "chargeplanApplicationApp": {
+        "collaborators": {
+            "home": {
+                "title": "Collaborators",
+                "createLabel": "Create a new Collaborators",
+                "createOrEditLabel": "Create or edit a Collaborators",
+                "search": "Search for Collaborators"
+            },
+            "created": "A new Collaborators is created with identifier {{ param }}",
+            "updated": "A Collaborators is updated with identifier {{ param }}",
+            "deleted": "A Collaborators is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Collaborators {{ id }}?"
+            },
+            "detail": {
+                "title": "Collaborators"
+            },
+            "nomCollaborator": "Last Name",
+            "prenomCollaborator": "First Name",
+            "trigramme": "Trigramme",
+            "email": "Email",
+            "competencies": "Competencies",
+            "affectation": "Affectation"
+        }
+    }
+}

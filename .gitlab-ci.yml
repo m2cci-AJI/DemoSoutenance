@@ -1,0 +1,17 @@
+#######################################
+# Check the project code quality with Sonar, make sure your Gitlab project has a secret variable (project -> settings -> CI/CD) defined called SONAR_TOKEN
+#######################################
+stages:
+  - build
+  - quality
+  - test
+  - deploy
+
+Job 1:
+  stage: quality
+  image: emeraldsquad/sonar-scanner
+  script:
+
+    - sonar-scanner -Dsonar.projectKey=open_chargeplan2 -Dsonar.sources=. -Dsonar.host.url=http://gitlab-gre.sud.teamlog.intra:9001  -Dsonar.gitlab.max_major_issues_gate=0 -X -Dsonar.java.binaries=target
+
+

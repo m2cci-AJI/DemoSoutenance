@@ -1,0 +1,56 @@
+{
+    "name": "Affectations",
+    "fields": [
+        {
+            "fieldName": "dateDebut",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dateFin",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "charge",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "commentaire",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "color",
+            "fieldType": "Colors",
+            "fieldValues": "FF8C00,ADFF2F,DC143C"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "collaborators",
+            "otherEntityRelationshipName": "affectation",
+            "relationshipName": "collaborator",
+            "otherEntityField": "nomCollaborator"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "projects",
+            "otherEntityRelationshipName": "affectation",
+            "relationshipName": "project",
+            "otherEntityField": "nameProject"
+        }
+    ],
+    "changelogDate": "20190414205029",
+    "entityTableName": "affectations",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": "elasticsearch",
+    "enableEntityAudit": true
+}

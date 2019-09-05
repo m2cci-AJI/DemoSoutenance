@@ -1,0 +1,60 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-collaborators-heading" jhiTranslate="chargeplanApplicationApp.collaborators.home.createOrEditLabel">Create or edit a Collaborators</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!collaborators.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="collaborators.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="chargeplanApplicationApp.collaborators.nomCollaborator" for="field_nomCollaborator">Nom Collaborator</label>
+                    <input type="text" class="form-control" name="nomCollaborator" id="field_nomCollaborator"
+                        [(ngModel)]="collaborators.nomCollaborator" required/>
+                    <div [hidden]="!(editForm.controls.nomCollaborator?.dirty && editForm.controls.nomCollaborator?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.nomCollaborator?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="chargeplanApplicationApp.collaborators.prenomCollaborator" for="field_prenomCollaborator">Prenom Collaborator</label>
+                    <input type="text" class="form-control" name="prenomCollaborator" id="field_prenomCollaborator"
+                        [(ngModel)]="collaborators.prenomCollaborator" required/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="chargeplanApplicationApp.collaborators.trigramme" for="field_trigramme">Trigramme</label>
+                    <input type="text" class="form-control" name="trigramme" id="field_trigramme"
+                        [(ngModel)]="collaborators.trigramme" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="chargeplanApplicationApp.collaborators.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                        [(ngModel)]="collaborators.email" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="chargeplanApplicationApp.collaborators.competencies" for="field_competencies">Competencies</label>
+                    <select class="form-control" name="competencies" [(ngModel)]="collaborators.competencies" id="field_competencies" >
+                        <option value="JAVA">{{'chargeplanApplicationApp.Skill.JAVA' | translate}}</option>
+                        <option value="C">{{'chargeplanApplicationApp.Skill.C' | translate}}</option>
+                        <option value="JAVASCRIPT">{{'chargeplanApplicationApp.Skill.JAVASCRIPT' | translate}}</option>
+                        <option value="PHP">{{'chargeplanApplicationApp.Skill.PHP' | translate}}</option>
+                        <option value="UML">{{'chargeplanApplicationApp.Skill.UML' | translate}}</option>
+                    </select>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="projects">
+            <h2><span jhiTranslate="chargeplanApplicationApp.projects.detail.title">Projects</span> {{projects.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="chargeplanApplicationApp.projects.nameProject">Name Project</span></dt>
+                <dd>
+                    <span>{{projects.nameProject}}</span>
+                </dd>
+                <dt><span jhiTranslate="chargeplanApplicationApp.projects.projectCode">Project Code</span></dt>
+                <dd>
+                    <span>{{projects.projectCode}}</span>
+                </dd>
+                <dt><span jhiTranslate="chargeplanApplicationApp.projects.client">Client</span></dt>
+                <dd>
+                    <span>{{projects.client}}</span>
+                </dd>
+                <dt><span jhiTranslate="chargeplanApplicationApp.projects.dP">D P</span></dt>
+                <dd>
+                    <span>{{projects.dP}}</span>
+                </dd>
+                <dt><span jhiTranslate="chargeplanApplicationApp.projects.description">Description</span></dt>
+                <dd>
+                    <span>{{projects.description}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/Project', projects.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

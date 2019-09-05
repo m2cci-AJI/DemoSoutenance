@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Affectations.
+    -->
+    <changeSet id="20190414205029-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="collaborator_id"
+                                 baseTableName="affectations"
+                                 constraintName="fk_affectations_collaborator_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="collaborators"/>
+
+        <addForeignKeyConstraint baseColumnNames="project_id"
+                                 baseTableName="affectations"
+                                 constraintName="fk_affectations_project_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="projects"/>
+
+    </changeSet>
+</databaseChangeLog>

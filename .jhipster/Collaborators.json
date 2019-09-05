@@ -1,0 +1,48 @@
+{
+    "name": "Collaborators",
+    "fields": [
+        {
+            "fieldName": "nomCollaborator",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "prenomCollaborator",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "trigramme",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "competencies",
+            "fieldType": "Skill",
+            "fieldValues": "JAVA,C,JAVASCRIPT,PHP,UML"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "affectations",
+            "otherEntityRelationshipName": "collaborator",
+            "relationshipName": "affectation"
+        }
+    ],
+    "changelogDate": "20190414205028",
+    "entityTableName": "collaborators",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "searchEngine": "elasticsearch",
+    "enableEntityAudit": true
+}

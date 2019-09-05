@@ -1,0 +1,55 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="affectations">
+            <h2><span jhiTranslate="chargeplanApplicationApp.affectations.detail.title">Affectations</span> {{affectations.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="chargeplanApplicationApp.affectations.dateDebut">Date Debut</span></dt>
+                <dd>
+                    <span>{{affectations.dateDebut}}</span>
+                </dd>
+                <dt><span jhiTranslate="chargeplanApplicationApp.affectations.dateFin">Date Fin</span></dt>
+                <dd>
+                    <span>{{affectations.dateFin}}</span>
+                </dd>
+                <dt><span jhiTranslate="chargeplanApplicationApp.affectations.charge">Charge</span></dt>
+                <dd>
+                    <span>{{affectations.charge}}</span>
+                </dd>
+                <dt><span jhiTranslate="chargeplanApplicationApp.affectations.commentaire">Commentaire</span></dt>
+                <dd>
+                    <span>{{affectations.commentaire}}</span>
+                </dd>
+                <dt><span jhiTranslate="chargeplanApplicationApp.affectations.color">Color</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'chargeplanApplicationApp.Colors.' + affectations.color}}">{{affectations.color}}</span>
+                </dd>
+                <dt><span jhiTranslate="chargeplanApplicationApp.affectations.collaborator">Collaborator</span></dt>
+                <dd>
+                    <div *ngIf="affectations.collaborator">
+                        <a [routerLink]="['/Collaborator', affectations.collaborator?.id, 'view']">{{affectations.collaborator?.nomCollaborator}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="chargeplanApplicationApp.affectations.project">Project</span></dt>
+                <dd>
+                    <div *ngIf="affectations.project">
+                        <a [routerLink]="['/Project', affectations.project?.id, 'view']">{{affectations.project?.nameProject}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/Affectation', affectations.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

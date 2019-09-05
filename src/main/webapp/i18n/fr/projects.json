@@ -1,0 +1,27 @@
+{
+    "chargeplanApplicationApp": {
+        "projects": {
+            "home": {
+                "title": "Projets",
+                "createLabel": "Créer un nouveau Projet",
+                "createOrEditLabel": "Créer ou éditer un Projet",
+                "search": "Recherche des Projets"
+            },
+            "created": "Un nouveau Projet a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Projet avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Projet avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Projet {{ id }} ?"
+            },
+            "detail": {
+                "title": "Projet"
+            },
+            "nameProject": "Nom Project",
+            "projectCode": "Code Projet",
+            "client": "Client",
+            "dP": "D P",
+            "description": "Description",
+            "affectation": "Affectation"
+        }
+    }
+}

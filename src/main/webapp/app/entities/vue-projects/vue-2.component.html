@@ -1,0 +1,361 @@
+<body class="body">
+  <!--creation of button to display a window (focus on time interval)-->
+  <div>
+    <ng-template #content5 let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title" jhiTranslate="chargeplanApplicationApp.vue2.home.ChangeInput">
+          Change input(s) of Affectation</h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="change_charge">
+              <span class="hidden-sm-down" jhiTranslate="chargeplanApplicationApp.vue2.home.Charge">
+                Charge
+              </span>
+            </label>
+            <input type="number" class="form-control" name="charge" id="change_charge"
+              [(ngModel)]="affectationChange.charge" />
+          </div>
+          <div class="form-group">
+            <label for="change_project">
+              <span class="hidden-sm-down" jhiTranslate="chargeplanApplicationApp.vue2.home.Collaborator">
+                Collaborator
+              </span>
+            </label>
+            <select class="form-control" id="collaborator" name="change_collaborator" [(ngModel)]="collaboratorSelected"
+              [ngModelOptions]="{standalone: true}">
+              <option [ngValue]="null"></option>
+              <option [ngValue]="collaboratorsOption" *ngFor="let collaboratorsOption of allCollaborators; trackBy: trackCollaboratorsById">
+                {{collaboratorsOption.nomCollaborator}} {{collaboratorsOption.prenomCollaborator}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="start_date">
+              <span class="hidden-sm-down" jhiTranslate="chargeplanApplicationApp.vue2.home.DateStart">
+                Start Date
+              </span>
+            </label>
+            <div class="input-group">
+              <input id="start_date" class="form-control" placeholder="yyyy-mm-dd" name="dp3" ngbDatepicker
+                #dp3="ngbDatepicker" [(ngModel)]="affectationChange.dateDebut">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="dp3.toggle()" type="button"></button>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="end_date">
+              <span class="hidden-sm-down" jhiTranslate="chargeplanApplicationApp.vue2.home.DateEnd">
+                End Date
+              </span>
+            </label>
+            <div class="input-group">
+              <input id="end_date" class="form-control" placeholder="yyyy-mm-dd" name="dp4" ngbDatepicker
+                #dp4="ngbDatepicker" [(ngModel)]="affectationChange.dateFin">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="dp4.toggle()" type="button"></button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="changeInputsAffectations()">
+          <span class="hidden-sm-down" jhiTranslate="chargeplanApplicationApp.vue2.home.Save">
+            Save
+          </span>
+        </button>
+      </div>
+    </ng-template>
+  </div>
+  <!--The creation of button to display a window is off-->
+  <div class="justify-content-center align-items-center flex-column">
+    <div class="row">
+      <div class="col col-sm-12">
+        <div class="card mb-3">
+          <div class="card-header">
+            <h2 jhiTranslate="chargeplanApplicationApp.vue2.home.viewProject">View with
+              Projects</h2>
+          </div>
+          <div style="overflow-x:visible;" class="card-block table-responsive">
+            <md-spinner style="margin:0 auto;"></md-spinner>
+            <!--creation of button to display a window (Display Project(s))-->
+            <div>
+              <ng-template #content6 let-modal>
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modal-basic-title"
+                    jhiTranslate="chargeplanApplicationApp.vue2.home.SelectionAffectation">
+                    Select affectation to display
+                  </h4>
+                  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form [formGroup]="userFormAffect">
+                    <div class="form-group">
+                      <label class="form-control-label"
+                        jhiTranslate="chargeplanApplicationApp.vue2.home.CollaboratorSelected" for="collaborator1">
+                        collaborator
+                      </label>
+                      <select class="form-control" name="collaborator1" [(ngModel)]="collaborator1"
+                        [ngModelOptions]="{standalone: true}">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="collaboratorsOption" *ngFor="let collaboratorsOption of allCollaborators">
+                          {{collaboratorsOption.nomCollaborator}} {{collaboratorsOption.prenomCollaborator}}</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-control-label"
+                        jhiTranslate="chargeplanApplicationApp.vue2.home.ProjectSelected" for="project1">
+                        project
+                      </label>
+                      <select class="form-control" id="project1" name="project1" [(ngModel)]="project1"
+                        [ngModelOptions]="{standalone: true}">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="projectsOption"
+                          *ngFor="let projectsOption of allProjects; trackBy: trackProjectsById">
+                          {{projectsOption.nameProject}}</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-dark" (click)="DisplaySomeAffectations()">
+                    <span class="hidden-sm-down" jhiTranslate="chargeplanApplicationApp.vue2.home.Save">
+                      Save
+                    </span>
+                  </button>
+                </div>
+              </ng-template>
+            </div>
+            <!--The creation of button to display a window is off-->
+            <!--creation of button to display a window (Display Project(s))-->
+            <div>
+              <ng-template #content4 let-modal>
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modal-basic-title"
+                    jhiTranslate="chargeplanApplicationApp.vue2.home.SelectionProject">
+                    Select project(s) to display
+                  </h4>
+                  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form [formGroup]="userFormProject">
+                    <div class="form-group">
+                      <label class="form-control-label"
+                        jhiTranslate="chargeplanApplicationApp.vue2.home.ProjectSelected" for="project1">
+                        project(s)
+                      </label>
+                      <select class="form-control" id="project1" name="project1" [(ngModel)]="project1"
+                        [ngModelOptions]="{standalone: true}">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="projectsOption"
+                          *ngFor="let projectsOption of allProjects; trackBy: trackProjectsById">
+                          {{projectsOption.nameProject}}</option>
+                      </select>
+                    </div>
+                    <div formArrayName="AddProjectList">
+                      <div class="form-group" *ngFor="let projectControl of getProjects().controls; let colabi= index">
+                        <select class="form-control" [formControlName]="colabi">
+                          <option [ngValue]="null"></option>
+                          <option [ngValue]="projectsOption"
+                            *ngFor="let projectsOption of allProjects; trackBy: trackProjectsById">
+                            {{projectsOption.nameProject}}</option>
+                        </select>
+                      </div>
+                      <button type="button" class="btn btn-outline-info" (click)="AddProjects()"
+                        jhiTranslate="chargeplanApplicationApp.vue2.home.createLabelP">
+                        Add project
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-dark" (click)="DisplaySomeProjects()">
+                    <span class="hidden-sm-down" jhiTranslate="chargeplanApplicationApp.vue2.home.Save">
+                      Save
+                    </span>
+                  </button>
+                </div>
+              </ng-template>
+            </div>
+            <!--The creation of button to display a window is off-->
+            <!--creation of button to display a window (Display Collaborator(s))-->
+            <div>
+              <ng-template #content2 let-modal>
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modal-basic-title"
+                    jhiTranslate="chargeplanApplicationApp.vue2.home.SelectionCollaborator">
+                    Select collaborator(s) to display
+                  </h4>
+                  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form [formGroup]="userFormCollab">
+                    <div class="form-group">
+                      <label class="form-control-label"
+                        jhiTranslate="chargeplanApplicationApp.vue2.home.CollaboratorSelected" for="collaborator1">
+                        collaborator(s)
+                      </label>
+                      <select class="form-control" name="collaborator1" [(ngModel)]="collaborator1"
+                        [ngModelOptions]="{standalone: true}">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="collaboratorsOption" *ngFor="let collaboratorsOption of allCollaborators">
+                          {{collaboratorsOption.nomCollaborator}} {{collaboratorsOption.prenomCollaborator}}</option>
+                      </select>
+                    </div>
+                    <div formArrayName="AddCollaboratorList">
+                      <div class="form-group"
+                        *ngFor="let collaboratorControl of getCollaborators().controls;  let colab= index">
+                        <select class="form-control" [formControlName]="colab">
+                          <option [ngValue]="null"></option>
+                          <option [ngValue]="collaboratorsOption" *ngFor="let collaboratorsOption of allCollaborators">
+                            {{collaboratorsOption.nomCollaborator}} {{collaboratorsOption.prenomCollaborator}}</option>
+                        </select>
+                      </div>
+                      <button type="button" class="btn btn-outline-info" (click)="AddCollaborators()"
+                        jhiTranslate="chargeplanApplicationApp.vue2.home.createLabelC">
+                        Add collaborator
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-dark" (click)="DisplaySomeCollaborators()">
+                    <span class="hidden-sm-down" jhiTranslate="chargeplanApplicationApp.vue2.home.Save">
+                      Save
+                    </span>
+                  </button>
+                </div>
+              </ng-template>
+            </div>
+            <!--The creation of button to display a window is off-->
+
+            <div class="row">
+              <div class="col-5">
+                <div class="border_button float-left">
+                  <button id="jh-create-entity" class="btn btn-outline-info btn-lg"
+                  [title]="traductionTitle()[0]" (click)="openCollab(content2)">
+                    <fa-icon [icon]="'users'"></fa-icon>
+                  </button>
+                  <button id="jh-create-entity" class="btn btn-outline-info btn-lg" [title]="traductionTitle()[1]"
+                    (click)="openProject(content4)">
+                    <fa-icon [icon]="'book'"></fa-icon>
+                  </button>
+                  <button id="jh-create-entity" class="btn btn-outline-info btn-lg"
+                  [title]="traductionTitle()[2]" (click)="openAffect(content6)">
+                    <fa-icon [icon]="'asterisk'"></fa-icon>
+                  </button>
+                  <button id="jh-create-entity" class="btn btn-outline-secondary btn-lg"
+                  [title]="traductionTitle()[3]" (click)="DisplayAllAffectations()">
+                    <fa-icon [icon]="'tasks'"></fa-icon>
+                  </button>
+                </div>
+              </div>
+              <div class="col">
+                <div class="border_button float-center">
+                  <button id="jh-create-entity" class="btn btn-outline-info btn-lg" [title]="traductionTitle()[4]"
+                    (click)="Centertimeline()">
+                    <fa-icon [icon]="'crosshairs'"></fa-icon>
+                  </button>
+                  <button id="jh-create-entity" class="btn btn-outline-info btn-lg" [title]="traductionTitle()[5]"
+                    (click)="Ajusttimeline()">
+                    <fa-icon [icon]="'adjust'"></fa-icon>
+                  </button>
+                  <button id="jh-create-entity" class="btn btn-outline-info btn-lg"
+                  [title]="traductionTitle()[6]" (click)="open(content)">
+                    <fa-icon [icon]="'expand'"></fa-icon>
+                  </button>
+                </div>
+              </div>
+              <div class="col-5">
+                <div class="border_button float-right">
+                  <button id="jh-create-entity" class="btn btn-outline-info btn-lg" [title]="traductionTitle()[7]"
+                    (click)="UndoTimeline()" [disabled]="OutUndoHistory">
+                    <fa-icon [icon]="'undo'"></fa-icon>
+                  </button>
+                  <button id="jh-create-entity" class="btn btn-outline-info btn-lg"
+                  [title]="traductionTitle()[8]" (click)="RedoTimeline()" [disabled]="OutRedoHistory">
+                    <fa-icon [icon]="'redo'"></fa-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!--creation of button to display a window (focus on time interval)-->
+            <div>
+              <ng-template #content let-modal>
+                <div class="modal-header">
+                  <h4 class="modal-title" id="modal-basic-title"
+                    jhiTranslate="chargeplanApplicationApp.vue2.home.SelectionIntervalTime">Select a time interval to
+                    display</h4>
+                  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="startDate">
+                        <span class="hidden-sm-down" jhiTranslate="chargeplanApplicationApp.vue2.home.DateStart">
+                          Start Date
+                        </span>
+                      </label>
+                      <div class="input-group">
+                        <input id="startDate" class="form-control" placeholder="yyyy-mm-dd" name="dp1" ngbDatepicker
+                          #dp1="ngbDatepicker" [(ngModel)]="dateDebutItem">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary calendar" (click)="dp1.toggle()"
+                            type="button"></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="endDate">
+                        <span class="hidden-sm-down" jhiTranslate="chargeplanApplicationApp.vue2.home.DateEnd">
+                          End Date
+                        </span>
+                      </label>
+                      <div class="input-group">
+                        <input id="endDate" class="form-control" placeholder="yyyy-mm-dd" name="dp2" ngbDatepicker
+                          #dp2="ngbDatepicker" [(ngModel)]="dateFinItem">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary calendar" (click)="dp2.toggle()"
+                            type="button"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-dark" (click)="displayInterval()">
+                    <span class="hidden-sm-down" jhiTranslate="chargeplanApplicationApp.vue2.home.Save">
+                      Save
+                    </span>
+                  </button>
+                </div>
+              </ng-template>
+            </div>
+            <div id="visualization" *ngIf="verifyLogin()" [visTimeline]="visTimeline"
+              [visTimelineItems]="visTimelineItems" [visTimelineGroups]="visTimelineGroups"
+              [visTimelineOptions]="visTimelineOptionsAdmin">
+            </div>
+            <div id="visualization" *ngIf="!verifyLogin()" [visTimeline]="visTimeline"
+              [visTimelineItems]="visTimelineItems" [visTimelineGroups]="visTimelineGroups"
+              [visTimelineOptions]="visTimelineOptionsUser">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

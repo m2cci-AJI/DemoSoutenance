@@ -1,0 +1,184 @@
+[33mcommit 18f18a5afc3d9752d46e266a935b5871ade2071b[m[33m ([m[1;36mHEAD -> [m[1;32mhome_page[m[33m, [m[1;31morigin/home_page[m[33m, [m[1;32mmaster[m[33m)[m
+Author: JEMAI AHMED <AJE18508@open-groupe.com>
+Date:   Fri Jul 5 10:46:13 2019 +0200
+
+    Modify home page
+
+[33mcommit b7e49300f2f3af4aea4849d1e69f238e29361c65[m
+Author: JEMAI AHMED <AJE18508@open-groupe.com>
+Date:   Wed Jul 3 17:05:37 2019 +0200
+
+    fix gitignore
+
+[33mcommit 9db8b54d36486c92ac5952f40d7f0cf8d34e24b0[m
+Author: JEMAI AHMED <AJE18508@open-groupe.com>
+Date:   Wed Jul 3 16:24:31 2019 +0200
+
+    nouvelle version de chargePlan
+
+[33mcommit 6af9fa390a527b004e20df0688183a7665001c81[m
+Author: YAHYA FATIMA-EZZAHRA FYA18319 <fatima-ezzahra.yahya@open-groupe.com>
+Date:   Wed Jun 26 08:17:38 2019 +0000
+
+    Update .gitignore
+
+[33mcommit b2fd754af5445fef19585dbb42f21714d763d3d6[m
+Author: TERPEND-ORDASSIERE NICOLAS NTE17742 <nicolas.terpend-ordassiere@open-groupe.com>
+Date:   Tue Jun 25 12:53:07 2019 +0000
+
+    Add new file
+
+[33mcommit 711fa9e4b25337a0874b7a4a8f029323ba48bc63[m
+Author: JEMAI AHMED <AJE18508@open-groupe.com>
+Date:   Tue Jun 11 17:00:43 2019 +0200
+
+    le projet charge plan est mis à jour
+
+[33mcommit 1ed6c5e01522496088e44720b97c041296299296[m
+Merge: 435150e 6d4d7ed
+Author: JEMAI AHMED <AJE18508@open-groupe.com>
+Date:   Wed May 29 18:54:34 2019 +0200
+
+    Merge branch 'master' of http://gitlab-gre.sud.teamlog.intra/NTE17742/open_chargeplan2
+
+[33mcommit 435150e3848cc681bbfe9880825227e30433b00d[m
+Author: JEMAI AHMED <AJE18508@open-groupe.com>
+Date:   Wed May 29 18:35:19 2019 +0200
+
+    updating
+
+[33mcommit 6d4d7eda02068fc57b70ca7da6430818507a5314[m[33m ([m[1;31morigin/TimeLine[m[33m)[m
+Merge: 1374d93 077796f
+Author: YAHYA FATIMA-EZZAHRA FYA18319 <fatima-ezzahra.yahya@open-groupe.com>
+Date:   Wed May 29 15:27:11 2019 +0000
+
+    Merge branch 'revert-1374d936' into 'master'
+    
+    Revert commit "Updates on timeline"
+    
+    See merge request NTE17742/open_chargeplan2!1
+
+[33mcommit 077796f9f1a7260aa42105b0b5288c6748d286b4[m
+Author: YAHYA FATIMA-EZZAHRA FYA18319 <fatima-ezzahra.yahya@open-groupe.com>
+Date:   Wed May 29 15:26:31 2019 +0000
+
+    Revert "Updates on timeline"
+    
+    This reverts commit 1374d93607a3882179327b3fac83badc6e63c1c9
+
+[33mcommit 622e8b647223e60a7886624edc42d88e9f31abe0[m
+Author: JEMAI AHMED <AJE18508@open-groupe.com>
+Date:   Wed May 29 17:20:00 2019 +0200
+
+     updating
+
+[33mcommit 1374d93607a3882179327b3fac83badc6e63c1c9[m
+Author: JEMAI AHMED <AJE18508@open-groupe.com>
+Date:   Wed May 29 17:02:35 2019 +0200
+
+    Updates on timeline
+
+[33mcommit 2fd1f8c1850e70802c199ea6b7b886a3a022bc00[m
+Merge: 7fe1905 d4aa838
+Author: YAHYA FATIMA-EZZAHRA <FYA18319@open-groupe.com>
+Date:   Mon May 13 14:19:13 2019 +0200
+
+    Merge branch 'master' of http://gitlab-gre.sud.teamlog.intra/NTE17742/open_chargeplan2
+
+[33mcommit 7fe190579ba8c6491d74ed68253006af15f39d07[m
+Author: YAHYA FATIMA-EZZAHRA <FYA18319@open-groupe.com>
+Date:   Mon May 13 14:18:56 2019 +0200
+
+    [Vue2]add ng2vis
+
+[33mcommit d4aa8383088a8e87d2fbc03218917ade65841dfa[m
+Author: YAHYA FATIMA-EZZAHRA FYA18319 <fatima-ezzahra.yahya@open-groupe.com>
+Date:   Thu May 9 11:27:06 2019 +0000
+
+    Update README.md
+
+[33mcommit 95f5606eb35ec115ac03a299ca34f6311c670efe[m
+Merge: 9a26ade 57a6d05
+Author: YAHYA FATIMA-EZZAHRA <FYA18319@open-groupe.com>
+Date:   Mon May 6 16:57:19 2019 +0200
+
+    Merging
+
+[33mcommit 9a26adec5739b1cbc79a742873fecbd1d99a37e6[m
+Author: YAHYA FATIMA-EZZAHRA <FYA18319@open-groupe.com>
+Date:   Mon May 6 16:28:07 2019 +0200
+
+    [VueComponent]- Fix date repetition by adding view-d.pipe (filter)
+
+[33mcommit 57a6d05a1477a7202217d0eee1ec262681f1173a[m
+Merge: ee43684 c11d99c
+Author: Thomas Champagne <thomas.champagne2@open-groupe.com>
+Date:   Mon May 6 14:27:07 2019 +0200
+
+    Merge branch 'master' of http://gitlab-gre.sud.teamlog.intra/NTE17742/open_chargeplan2
+
+[33mcommit ee43684ebf531d62e868e5f3874a54ac37512213[m
+Author: Thomas Champagne <thomas.champagne2@open-groupe.com>
+Date:   Mon May 6 14:25:40 2019 +0200
+
+    Fix prod build failure
+
+[33mcommit b68853fc776fa245480828ce63fef519540f94ae[m
+Author: Thomas Champagne <thomas.champagne2@open-groupe.com>
+Date:   Mon May 6 14:11:25 2019 +0200
+
+    Ident
+
+[33mcommit 3ffe95a23af693dee00cec8785a838ea0f848276[m
+Author: Thomas Champagne <thomas.champagne2@open-groupe.com>
+Date:   Mon May 6 14:07:25 2019 +0200
+
+    Linting
+
+[33mcommit c11d99cfc62bdafe8cae9d5ba57c6d564f63aedc[m
+Author: YAHYA FATIMA-EZZAHRA FYA18319 <fatima-ezzahra.yahya@open-groupe.com>
+Date:   Mon May 6 08:19:26 2019 +0000
+
+    Upload chargeplanapplication.sql File
+
+[33mcommit 85e08daff095acaeb02a093986507b01df499a09[m
+Author: YAHYA FATIMA-EZZAHRA <FYA18319@open-groupe.com>
+Date:   Mon May 6 09:46:48 2019 +0200
+
+    [VueComponent]-Update the view-week.pipe
+
+[33mcommit 8d60c7df390e344fa4aa8dd5bbe11e4da97e8155[m
+Author: YAHYA FATIMA-EZZAHRA <FYA18319@open-groupe.com>
+Date:   Fri May 3 17:26:25 2019 +0200
+
+     [updated VueComponent]-Managed Months and Days + created the table's CSS
+
+[33mcommit 52c03cb3a3b9e0b7219f92e3e10d72b7b0a1e8c8[m
+Author: YAHYA FATIMA-EZZAHRA <FYA18319@open-groupe.com>
+Date:   Tue Apr 30 12:09:41 2019 +0200
+
+    trying to add timeline
+
+[33mcommit 1d6ecb35e4034ea00f6d3b7b4613550f535fa64f[m
+Author: YAHYA FATIMA-EZZAHRA <FYA18319@open-groupe.com>
+Date:   Tue Apr 30 12:07:41 2019 +0200
+
+    trying to add timeline
+
+[33mcommit 051f7c38bf5b1f1760e9c375dca48af5bc5f2c3e[m
+Author: YAHYA FATIMA-EZZAHRA <FYA18319@open-groupe.com>
+Date:   Mon Apr 29 16:55:50 2019 +0200
+
+    try to integrate the scheduler#2
+
+[33mcommit 47f6124f2aa01ce71c067b7286292b1cc39a90f6[m
+Author: YAHYA FATIMA-EZZAHRA <FYA18319@open-groupe.com>
+Date:   Wed Apr 24 16:40:37 2019 +0200
+
+    don't know
+
+[33mcommit 1aff59ad06a73ea223664b4f9f548fe601e50c59[m
+Author: YAHYA FATIMA-EZZAHRA <FYA18319@open-groupe.com>
+Date:   Thu Apr 18 17:21:44 2019 +0200
+
+    add new page form timeline vue

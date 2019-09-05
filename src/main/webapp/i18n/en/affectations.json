@@ -1,0 +1,28 @@
+{
+    "chargeplanApplicationApp": {
+        "affectations": {
+            "home": {
+                "title": "Affectations",
+                "createLabel": "Create a new Affectations",
+                "createOrEditLabel": "Create or edit a Affectations",
+                "search": "Search for Affectations"
+            },
+            "created": "A new Affectations is created with identifier {{ param }}",
+            "updated": "A Affectations is updated with identifier {{ param }}",
+            "deleted": "A Affectations is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Affectations {{ id }}?"
+            },
+            "detail": {
+                "title": "Affectations"
+            },
+            "dateDebut": "Start Date",
+            "dateFin": "End Date",
+            "charge": "Charge",
+            "commentaire": "Comment",
+            "color": "Color",
+            "collaborator": "Collaborator",
+            "project": "Project"
+        }
+    }
+}

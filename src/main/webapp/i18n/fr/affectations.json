@@ -1,0 +1,28 @@
+{
+    "chargeplanApplicationApp": {
+        "affectations": {
+            "home": {
+                "title": "Affectations",
+                "createLabel": "Créer une nouvelle Affectation",
+                "createOrEditLabel": "Créer ou éditer une Affectation",
+                "search": "Recherche des Affectations"
+            },
+            "created": "Une nouvelle Affectation a été créée avec l'identifiant {{ param }}",
+            "updated": "L' Affectation avec l'identifiant {{ param }} a été mise à jour",
+            "deleted": "L' Affectation avec l'identifiant {{ param }} a été supprimée",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer l' Affectation {{ id }} ?"
+            },
+            "detail": {
+                "title": "Affectations"
+            },
+            "dateDebut": "Date Debut",
+            "dateFin": "Date Fin",
+            "charge": "Charge",
+            "commentaire": "Commentaire",
+            "color": "Couleur",
+            "collaborator": "Collaborateur",
+            "project": "Projet"
+        }
+    }
+}

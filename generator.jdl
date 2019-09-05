@@ -1,0 +1,44 @@
+entity Projects {
+		nameProject String required ,
+		projectCode String required
+    client String ,
+		 DP String,
+    description String
+}
+
+entity Collaborators {
+		nomCollaborator String required,
+    prenomCollaborator String ,
+    trigramme String,
+    email String ,
+    competencies Skill
+}
+
+
+entity Affectations {
+	dateDebut LocalDate  required,
+	dateFin LocalDate ,
+  charge Integer,
+  commentaire String,
+	color Colors
+}
+
+enum Colors {
+  FF8C00, FF8C00, ADFF2F, DC143C
+}
+
+enum Skill {
+	JAVA, C , JAVASCRIPT, PHP , UML
+}
+
+relationship OneToMany {
+   Collaborators{affectation} to Affectations{collaborator(nomCollaborator)}
+    Projects{affectation} to Affectations{project(nameProject)}
+}
+
+
+
+paginate * with pagination
+filter all
+service all with serviceImpl
+search * with elasticsearch

@@ -1,0 +1,42 @@
+{
+    "generator-jhipster": {
+        "applicationType": "monolith",
+        "gitCompany": "",
+        "baseName": "chargeplanApplication",
+        "packageName": "io.github.chargeplan.application",
+        "packageFolder": "io/github/chargeplan/application",
+        "serverPort": 9090,
+        "serviceDiscoveryType": false,
+        "authenticationType": "jwt",
+        "uaaBaseName": "../uaa",
+        "cacheProvider": "no",
+        "enableHibernateCache": false,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "mysql",
+        "prodDatabaseType": "mysql",
+        "searchEngine": "elasticsearch",
+        "enableSwaggerCodegen": false,
+        "messageBroker": false,
+        "buildTool": "maven",
+        "useSass": false,
+        "clientPackageManager": "npm",
+        "testFrameworks": [],
+        "enableTranslation": true,
+        "nativeLanguage": "fr",
+        "languages": ["en", "fr"],
+        "clientFramework": "angularX",
+        "jhiPrefix": "jhi",
+        "jhipsterVersion": "5.8.2",
+        "jwtSecretKey": "MTk5ODAwZGRkNTYxNjQ2MWNmNzEwMTY0MzNkNGRjNDNiZjdlOTkyZGYwODczYWQxYTUyZDlhZDVmZTM3OGY4YzJhMjA1NzhhZDcwOGYyOTNjYjZmMzg5Y2QyMzY5NjdjM2RmODUyOGUyMjgyZTllZjE2MjU1OTJiZTdiMTIwYWI=",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": []
+    },
+    "git-provider": "GitHub",
+    "git-company": "YAHYAfz",
+    "repository-name": "chargeplan-application",
+    "generator-jhipster-entity-audit": {
+        "auditFramework": "custom"
+    }
+}
